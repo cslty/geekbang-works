@@ -18,7 +18,8 @@ package org.geektimes.configuration.microprofile.config.util;
 
 import org.eclipse.microprofile.config.Config;
 
-import java.util.Properties;
+import java.io.*;
+import java.util.*;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.Function;

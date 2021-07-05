@@ -3,6 +3,7 @@ package org.geektimes.rest.core;
 import javax.ws.rs.core.*;
 import java.lang.annotation.Annotation;
 import java.net.URI;
+import java.util.*;
 
 public class DefaultResponseBuilder extends Response.ResponseBuilder {
 

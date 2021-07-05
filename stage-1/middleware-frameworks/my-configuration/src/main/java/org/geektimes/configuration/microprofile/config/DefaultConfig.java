@@ -8,6 +8,8 @@ import org.eclipse.microprofile.config.spi.Converter;
 import org.geektimes.configuration.microprofile.config.converter.Converters;
 import org.geektimes.configuration.microprofile.config.source.ConfigSources;
 
+import java.util.*;
+
 import static java.util.stream.StreamSupport.stream;
 
 class DefaultConfig implements Config {

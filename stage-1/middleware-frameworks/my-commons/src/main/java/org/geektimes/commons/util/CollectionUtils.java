@@ -16,10 +16,7 @@
  */
 package org.geektimes.commons.util;
 
-import java.util.AbstractSet;
-import java.util.Collection;
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.*;
 
 import static java.util.Collections.emptySet;
 import static java.util.Collections.unmodifiableSet;

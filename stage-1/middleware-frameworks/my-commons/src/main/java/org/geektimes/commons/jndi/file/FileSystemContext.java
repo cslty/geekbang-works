@@ -22,7 +22,7 @@ import org.geektimes.commons.io.Deserializers;
 import org.geektimes.commons.io.Serializer;
 import org.geektimes.commons.io.Serializers;
 
-import javax.naming.Context;
+import javax.naming.*;
 import java.io.File;
 import java.util.Hashtable;
 import java.util.Map;
@@ -133,6 +133,7 @@ class FileSystemContext implements Context {
             Serializer serializer = serializers.getMostCompatible(objClass);
             byte[] bytes = serializer.serialize(obj);
             FileUtils.writeByteArrayToFile(targetFile, bytes);
+            return null;
         }, NamingException.class);
     }
 

@@ -5,6 +5,7 @@ import javax.ws.rs.client.AsyncInvoker;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.Invocation;
 import javax.ws.rs.core.*;
+import java.util.*;
 import java.util.stream.Stream;
 
 public class DefaultInvocationBuilder implements Invocation.Builder {

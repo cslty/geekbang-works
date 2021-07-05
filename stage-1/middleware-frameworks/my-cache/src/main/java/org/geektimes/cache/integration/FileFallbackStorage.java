@@ -19,6 +19,7 @@ package org.geektimes.cache.integration;
 import javax.cache.Cache;
 import javax.cache.integration.CacheLoaderException;
 import javax.cache.integration.CacheWriterException;
+import java.io.*;
 import java.util.logging.Logger;
 
 import static java.lang.String.format;

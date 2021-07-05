@@ -34,6 +34,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.*;
 
 
 @Controller
@@ -131,7 +132,7 @@ public class CustomProductGroupsController {
 		
 		
 		if(StringUtils.isBlank(group.getCode())) {
-			FieldError fieldError = new FieldError("group","code",group.getCode(),false,null,null,messages.getMessage("message.group.required",locale));
+			FieldError fieldError = new FieldError("group","code",group.getCode(),false,null,null,messages.getMessage("message.group.required", locale));
 			result.addError(fieldError);
 			return ControllerConstants.Tiles.Product.customGroups;
 		}

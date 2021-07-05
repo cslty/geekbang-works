@@ -26,6 +26,7 @@ import java.io.InputStreamReader;
 import java.lang.annotation.Annotation;
 import java.net.HttpURLConnection;
 import java.net.URI;
+import java.util.*;
 
 import static org.geektimes.rest.util.URLUtils.DEFAULT_ENCODING;
 
