@@ -1,14 +1,13 @@
 package com.salesmanager.shop.application.config;
 
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
 import org.springframework.aop.interceptor.SimpleAsyncUncaughtExceptionHandler;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.AsyncConfigurer;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
-
-import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
 
 @Configuration
 @EnableScheduling

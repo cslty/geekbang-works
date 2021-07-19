@@ -1,15 +1,13 @@
 package com.salesmanager.core.business.modules.integration.shipping.impl;
 
-import com.salesmanager.core.business.configuration.DroolsBeanFactory;
-import com.salesmanager.core.model.common.Delivery;
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.core.model.shipping.*;
-import com.salesmanager.core.model.system.CustomIntegrationConfiguration;
-import com.salesmanager.core.model.system.IntegrationConfiguration;
-import com.salesmanager.core.model.system.IntegrationModule;
-import com.salesmanager.core.modules.constants.Constants;
-import com.salesmanager.core.modules.integration.IntegrationException;
-import com.salesmanager.core.modules.integration.shipping.model.ShippingQuoteModule;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Locale;
+
+import javax.inject.Inject;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
 import org.kie.api.runtime.KieSession;
@@ -17,12 +15,20 @@ import org.kie.internal.io.ResourceFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.inject.Inject;
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Locale;
+import com.salesmanager.core.business.configuration.DroolsBeanFactory;
+import com.salesmanager.core.model.common.Delivery;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.shipping.PackageDetails;
+import com.salesmanager.core.model.shipping.ShippingConfiguration;
+import com.salesmanager.core.model.shipping.ShippingOption;
+import com.salesmanager.core.model.shipping.ShippingOrigin;
+import com.salesmanager.core.model.shipping.ShippingQuote;
+import com.salesmanager.core.model.system.CustomIntegrationConfiguration;
+import com.salesmanager.core.model.system.IntegrationConfiguration;
+import com.salesmanager.core.model.system.IntegrationModule;
+import com.salesmanager.core.modules.constants.Constants;
+import com.salesmanager.core.modules.integration.IntegrationException;
+import com.salesmanager.core.modules.integration.shipping.model.ShippingQuoteModule;
 
 
 public class CustomShippingQuoteRules implements ShippingQuoteModule {

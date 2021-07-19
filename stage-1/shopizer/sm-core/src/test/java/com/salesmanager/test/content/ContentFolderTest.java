@@ -1,12 +1,14 @@
 package com.salesmanager.test.content;
 
+import java.util.Optional;
+
+import javax.inject.Inject;
+
+import org.junit.Ignore;
+
 import com.salesmanager.core.business.exception.ServiceException;
 import com.salesmanager.core.business.services.content.ContentService;
 import com.salesmanager.core.model.merchant.MerchantStore;
-import org.junit.Ignore;
-
-import javax.inject.Inject;
-import java.util.Optional;
 
 /**
  * Test content with CMS store logo

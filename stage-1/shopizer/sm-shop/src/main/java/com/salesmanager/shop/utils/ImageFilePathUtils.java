@@ -1,8 +1,9 @@
 package com.salesmanager.shop.utils;
 
+import org.springframework.stereotype.Component;
+
 import com.salesmanager.core.model.merchant.MerchantStore;
 import com.salesmanager.shop.constants.Constants;
-import org.springframework.stereotype.Component;
 
 /**
  * To be used when using an external web server for managing images

@@ -1,16 +1,15 @@
 package com.salesmanager.core.business.services.user;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import javax.inject.Inject;
+import org.springframework.stereotype.Service;
 import com.salesmanager.core.business.exception.ServiceException;
 import com.salesmanager.core.business.repositories.user.GroupRepository;
 import com.salesmanager.core.business.services.common.generic.SalesManagerEntityServiceImpl;
 import com.salesmanager.core.model.user.Group;
 import com.salesmanager.core.model.user.GroupType;
-import org.springframework.stereotype.Service;
-
-import javax.inject.Inject;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
 
 
 @Service("groupService")

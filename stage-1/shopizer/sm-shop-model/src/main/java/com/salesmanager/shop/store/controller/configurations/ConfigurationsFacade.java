@@ -1,10 +1,10 @@
 package com.salesmanager.shop.store.controller.configurations;
 
+import java.util.List;
+
 import com.salesmanager.core.model.merchant.MerchantStore;
 import com.salesmanager.shop.model.configuration.PersistableConfiguration;
 import com.salesmanager.shop.model.configuration.ReadableConfiguration;
-
-import java.util.List;
 
 public interface ConfigurationsFacade {
 	

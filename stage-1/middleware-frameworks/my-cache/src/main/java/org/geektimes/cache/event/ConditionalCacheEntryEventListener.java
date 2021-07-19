@@ -16,6 +16,7 @@
  */
 package org.geektimes.cache.event;
 
+import javax.cache.Cache;
 import javax.cache.configuration.CacheEntryListenerConfiguration;
 import javax.cache.event.*;
 import java.util.EventListener;

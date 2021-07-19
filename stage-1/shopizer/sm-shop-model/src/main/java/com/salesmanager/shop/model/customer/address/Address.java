@@ -1,8 +1,8 @@
 package com.salesmanager.shop.model.customer.address;
 
-import io.swagger.annotations.ApiModelProperty;
-
 import java.io.Serializable;
+
+import io.swagger.annotations.ApiModelProperty;
 
 
 /**

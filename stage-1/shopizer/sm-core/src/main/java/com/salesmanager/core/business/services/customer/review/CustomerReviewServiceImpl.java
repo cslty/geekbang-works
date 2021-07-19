@@ -1,17 +1,19 @@
 package com.salesmanager.core.business.services.customer.review;
 
+import java.math.BigDecimal;
+import java.util.List;
+
+import javax.inject.Inject;
+
+import org.apache.commons.lang3.Validate;
+import org.springframework.stereotype.Service;
+
 import com.salesmanager.core.business.exception.ServiceException;
 import com.salesmanager.core.business.repositories.customer.review.CustomerReviewRepository;
 import com.salesmanager.core.business.services.common.generic.SalesManagerEntityServiceImpl;
 import com.salesmanager.core.business.services.customer.CustomerService;
 import com.salesmanager.core.model.customer.Customer;
 import com.salesmanager.core.model.customer.review.CustomerReview;
-import org.apache.commons.lang3.Validate;
-import org.springframework.stereotype.Service;
-
-import javax.inject.Inject;
-import java.math.BigDecimal;
-import java.util.List;
 
 @Service("customerReviewService")
 public class CustomerReviewServiceImpl extends

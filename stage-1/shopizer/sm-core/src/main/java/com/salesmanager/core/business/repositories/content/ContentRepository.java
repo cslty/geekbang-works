@@ -1,11 +1,12 @@
 package com.salesmanager.core.business.repositories.content;
 
-import com.salesmanager.core.model.content.Content;
-import com.salesmanager.core.model.content.ContentType;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import java.util.List;
+import com.salesmanager.core.model.content.Content;
+import com.salesmanager.core.model.content.ContentType;
 
 public interface ContentRepository extends JpaRepository<Content, Long>,  ContentRepositoryCustom  {
 

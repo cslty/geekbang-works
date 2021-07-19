@@ -1,10 +1,18 @@
 package com.salesmanager.shop.filter;
 
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+import java.io.IOException;
 
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 public class CorsFilter extends HandlerInterceptorAdapter {
 

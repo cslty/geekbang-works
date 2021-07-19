@@ -1,12 +1,16 @@
 package com.salesmanager.shop.model.customer;
 
-import com.salesmanager.shop.model.customer.address.Address;
-import io.swagger.annotations.ApiModelProperty;
+import java.io.Serializable;
 
 import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
-import java.io.Serializable;
+
+import org.springframework.validation.annotation.Validated;
+
+import com.salesmanager.shop.model.customer.address.Address;
+
+import io.swagger.annotations.ApiModelProperty;
 
 public class CustomerEntity extends Customer implements Serializable {
 

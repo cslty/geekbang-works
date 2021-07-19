@@ -3,21 +3,6 @@
  */
 package com.salesmanager.core.business.modules.cms.content.infinispan;
 
-import com.salesmanager.core.business.constants.Constants;
-import com.salesmanager.core.business.exception.ServiceException;
-import com.salesmanager.core.business.modules.cms.content.ContentAssetsManager;
-import com.salesmanager.core.business.modules.cms.impl.CMSManager;
-import com.salesmanager.core.business.modules.cms.impl.CacheManager;
-import com.salesmanager.core.model.content.FileContentType;
-import com.salesmanager.core.model.content.InputContentFile;
-import com.salesmanager.core.model.content.OutputContentFile;
-import org.apache.commons.io.IOUtils;
-import org.infinispan.tree.Fqn;
-import org.infinispan.tree.Node;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import javax.annotation.PostConstruct;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
@@ -27,6 +12,22 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
+
+import javax.annotation.PostConstruct;
+import org.apache.commons.io.IOUtils;
+import org.infinispan.tree.Fqn;
+import org.infinispan.tree.Node;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.salesmanager.core.business.constants.Constants;
+import com.salesmanager.core.business.exception.ServiceException;
+import com.salesmanager.core.business.modules.cms.content.ContentAssetsManager;
+import com.salesmanager.core.business.modules.cms.impl.CMSManager;
+import com.salesmanager.core.business.modules.cms.impl.CacheManager;
+import com.salesmanager.core.model.content.FileContentType;
+import com.salesmanager.core.model.content.InputContentFile;
+import com.salesmanager.core.model.content.OutputContentFile;
 
 /**
  * Manages - Images - Files (js, pdf, css...) on infinispan

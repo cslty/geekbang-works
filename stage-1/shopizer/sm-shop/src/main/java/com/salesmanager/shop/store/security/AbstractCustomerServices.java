@@ -1,14 +1,9 @@
 package com.salesmanager.shop.store.security;
 
-import com.salesmanager.core.business.exception.ServiceException;
-import com.salesmanager.core.business.services.customer.CustomerService;
-import com.salesmanager.core.business.services.user.GroupService;
-import com.salesmanager.core.business.services.user.PermissionService;
-import com.salesmanager.core.model.customer.Customer;
-import com.salesmanager.core.model.user.Group;
-import com.salesmanager.core.model.user.Permission;
-import com.salesmanager.shop.admin.security.SecurityDataAccessException;
-import com.salesmanager.shop.constants.Constants;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 import org.apache.commons.collections4.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,9 +14,15 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import com.salesmanager.core.business.exception.ServiceException;
+import com.salesmanager.core.business.services.customer.CustomerService;
+import com.salesmanager.core.business.services.user.GroupService;
+import com.salesmanager.core.business.services.user.PermissionService;
+import com.salesmanager.core.model.customer.Customer;
+import com.salesmanager.core.model.user.Group;
+import com.salesmanager.core.model.user.Permission;
+import com.salesmanager.shop.admin.security.SecurityDataAccessException;
+import com.salesmanager.shop.constants.Constants;
 
 public abstract class AbstractCustomerServices implements UserDetailsService{
 	

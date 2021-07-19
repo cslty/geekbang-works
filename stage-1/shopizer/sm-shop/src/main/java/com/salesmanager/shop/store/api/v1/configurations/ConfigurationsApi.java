@@ -1,16 +1,23 @@
 package com.salesmanager.shop.store.api.v1.configurations;
 
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.core.model.reference.language.Language;
-import com.salesmanager.shop.model.configuration.ReadableConfiguration;
-import io.swagger.annotations.*;
+import java.util.List;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import springfox.documentation.annotations.ApiIgnore;
 
-import java.util.List;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.reference.language.Language;
+import com.salesmanager.shop.model.configuration.ReadableConfiguration;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.SwaggerDefinition;
+import io.swagger.annotations.Tag;
+import springfox.documentation.annotations.ApiIgnore;
 
 @RestController
 @RequestMapping(value = "/api/v1")

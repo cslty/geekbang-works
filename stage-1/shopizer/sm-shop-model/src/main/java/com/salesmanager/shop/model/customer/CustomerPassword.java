@@ -1,10 +1,9 @@
 package com.salesmanager.shop.model.customer;
 
-import com.salesmanager.shop.validation.FieldMatch;
-
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
 import java.io.Serializable;
+import javax.validation.constraints.Size;
+import javax.validation.constraints.NotEmpty;
+import com.salesmanager.shop.validation.FieldMatch;
 
 @FieldMatch.List({
     @FieldMatch(first="password",second="checkPassword",message="password.notequal")

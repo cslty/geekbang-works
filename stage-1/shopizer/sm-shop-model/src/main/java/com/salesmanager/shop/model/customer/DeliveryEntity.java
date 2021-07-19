@@ -1,8 +1,9 @@
 package com.salesmanager.shop.model.customer;
 
-import com.salesmanager.shop.model.customer.address.Address;
-
 import java.io.Serializable;
+
+
+import com.salesmanager.shop.model.customer.address.Address;
 
 
 public class DeliveryEntity extends Address implements Serializable {

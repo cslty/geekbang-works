@@ -1,12 +1,9 @@
 package com.salesmanager.shop.store.api.v1.user;
 
-import com.salesmanager.shop.store.security.AuthenticationRequest;
-import com.salesmanager.shop.store.security.AuthenticationResponse;
-import com.salesmanager.shop.store.security.JWTTokenUtil;
-import com.salesmanager.shop.store.security.user.JWTUser;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.SwaggerDefinition;
-import io.swagger.annotations.Tag;
+import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+
 import org.apache.http.auth.AuthenticationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,9 +21,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.inject.Inject;
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
+import com.salesmanager.shop.store.security.AuthenticationRequest;
+import com.salesmanager.shop.store.security.AuthenticationResponse;
+import com.salesmanager.shop.store.security.JWTTokenUtil;
+import com.salesmanager.shop.store.security.user.JWTUser;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.SwaggerDefinition;
+import io.swagger.annotations.Tag;
 
 /**
  * Authenticates a User (Administration purpose)

@@ -2,6 +2,8 @@ package com.salesmanager.core.model.common;
 
 import java.util.List;
 
+import com.salesmanager.core.model.merchant.MerchantStore;
+
 public class Criteria {
 
 	// legacy pagination

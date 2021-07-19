@@ -1,14 +1,15 @@
 package com.salesmanager.core.model.common.audit;
 
-import com.salesmanager.core.utils.CloneUtils;
-import org.apache.commons.lang3.StringUtils;
-
+import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import java.io.Serializable;
-import java.util.Date;
+
+import org.apache.commons.lang3.StringUtils;
+
+import com.salesmanager.core.utils.CloneUtils;
 
 
 @Embeddable

@@ -1,22 +1,34 @@
 package com.salesmanager.shop.utils;
 
+import static com.salesmanager.shop.constants.Constants.ADMIN_URI;
+import static com.salesmanager.shop.constants.Constants.BLANK;
+import static com.salesmanager.shop.constants.Constants.CATEGORY_URI;
+import static com.salesmanager.shop.constants.Constants.DEFAULT_DOMAIN_NAME;
+import static com.salesmanager.shop.constants.Constants.FILES_URI;
+import static com.salesmanager.shop.constants.Constants.HTTP_SCHEME;
+import static com.salesmanager.shop.constants.Constants.ORDER_DOWNLOAD_URI;
+import static com.salesmanager.shop.constants.Constants.SHOP_URI;
+import static com.salesmanager.shop.constants.Constants.SLASH;
+import static com.salesmanager.shop.constants.Constants.STATIC_URI;
+import static com.salesmanager.shop.constants.Constants.URL_EXTENSION;
+
+import java.net.URL;
+import java.util.Properties;
+
+import javax.annotation.Resource;
+import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
 import com.salesmanager.core.business.utils.CoreConfiguration;
 import com.salesmanager.core.model.catalog.product.file.DigitalProduct;
 import com.salesmanager.core.model.content.FileContentType;
 import com.salesmanager.core.model.merchant.MerchantStore;
 import com.salesmanager.shop.constants.Constants;
 import com.salesmanager.shop.model.order.ReadableOrderProductDownload;
-import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
-
-import javax.annotation.Resource;
-import javax.inject.Inject;
-import javax.servlet.http.HttpServletRequest;
-import java.net.URL;
-import java.util.Properties;
-
-import static com.salesmanager.shop.constants.Constants.*;
 
 @Component
 public class FilePathUtils {

@@ -1,5 +1,11 @@
 package com.salesmanager.core.business.services.customer.attribute;
 
+import java.util.List;
+
+import javax.inject.Inject;
+
+import org.springframework.stereotype.Service;
+
 import com.salesmanager.core.business.exception.ServiceException;
 import com.salesmanager.core.business.repositories.customer.attribute.CustomerOptionValueRepository;
 import com.salesmanager.core.business.services.common.generic.SalesManagerEntityServiceImpl;
@@ -8,10 +14,6 @@ import com.salesmanager.core.model.customer.attribute.CustomerOptionSet;
 import com.salesmanager.core.model.customer.attribute.CustomerOptionValue;
 import com.salesmanager.core.model.merchant.MerchantStore;
 import com.salesmanager.core.model.reference.language.Language;
-import org.springframework.stereotype.Service;
-
-import javax.inject.Inject;
-import java.util.List;
 
 
 @Service("customerOptionValueService")

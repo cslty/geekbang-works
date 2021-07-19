@@ -1,5 +1,13 @@
 package com.salesmanager.core.business.services.customer;
 
+import java.util.List;
+
+import javax.inject.Inject;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+
 import com.salesmanager.core.business.exception.ServiceException;
 import com.salesmanager.core.business.repositories.customer.CustomerRepository;
 import com.salesmanager.core.business.services.common.generic.SalesManagerEntityServiceImpl;
@@ -11,12 +19,6 @@ import com.salesmanager.core.model.customer.CustomerList;
 import com.salesmanager.core.model.customer.attribute.CustomerAttribute;
 import com.salesmanager.core.model.merchant.MerchantStore;
 import com.salesmanager.core.modules.utils.GeoLocation;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
-
-import javax.inject.Inject;
-import java.util.List;
 
 
 

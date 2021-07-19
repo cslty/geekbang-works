@@ -1,8 +1,8 @@
 package com.salesmanager.shop.admin.model.customer.attribute;
 
-import com.salesmanager.shop.model.entity.ShopEntity;
-
 import java.io.Serializable;
+
+import com.salesmanager.shop.model.entity.ShopEntity;
 
 
 

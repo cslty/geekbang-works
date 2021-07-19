@@ -1,8 +1,9 @@
 package com.salesmanager.core.business.repositories.catalog.product.file;
 
-import com.salesmanager.core.model.catalog.product.file.DigitalProduct;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+
+import com.salesmanager.core.model.catalog.product.file.DigitalProduct;
 
 public interface DigitalProductRepository extends JpaRepository<DigitalProduct, Long> {
 

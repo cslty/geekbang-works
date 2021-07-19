@@ -1,15 +1,15 @@
 package com.salesmanager.shop.admin.controller.configurations;
 
-import com.salesmanager.core.business.modules.email.EmailConfig;
-import com.salesmanager.core.business.services.system.EmailService;
-import com.salesmanager.core.business.services.system.MerchantConfigurationService;
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.core.model.system.MerchantConfiguration;
-import com.salesmanager.core.model.system.MerchantConfigurationType;
-import com.salesmanager.shop.admin.controller.ControllerConstants;
-import com.salesmanager.shop.admin.model.web.ConfigListWrapper;
-import com.salesmanager.shop.admin.model.web.Menu;
-import com.salesmanager.shop.constants.Constants;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+
+import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,10 +22,16 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.inject.Inject;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.util.*;
+import com.salesmanager.core.business.modules.email.EmailConfig;
+import com.salesmanager.core.business.services.system.EmailService;
+import com.salesmanager.core.business.services.system.MerchantConfigurationService;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.system.MerchantConfiguration;
+import com.salesmanager.core.model.system.MerchantConfigurationType;
+import com.salesmanager.shop.admin.controller.ControllerConstants;
+import com.salesmanager.shop.admin.model.web.ConfigListWrapper;
+import com.salesmanager.shop.admin.model.web.Menu;
+import com.salesmanager.shop.constants.Constants;
 
 
 

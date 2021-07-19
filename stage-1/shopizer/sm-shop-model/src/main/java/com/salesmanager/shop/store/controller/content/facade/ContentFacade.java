@@ -1,24 +1,25 @@
 package com.salesmanager.shop.store.controller.content.facade;
 
+import java.util.List;
+import java.util.Optional;
+
 import com.salesmanager.core.model.content.ContentType;
 import com.salesmanager.core.model.content.FileContentType;
 import com.salesmanager.core.model.content.OutputContentFile;
+
+//TODO above deprecation, use shop model instead of core model
+
 import com.salesmanager.core.model.merchant.MerchantStore;
 import com.salesmanager.core.model.reference.language.Language;
 import com.salesmanager.shop.model.content.ContentFile;
 import com.salesmanager.shop.model.content.ContentFolder;
-import com.salesmanager.shop.model.content.ReadableContentEntity;
-import com.salesmanager.shop.model.content.ReadableContentFull;
 import com.salesmanager.shop.model.content.box.PersistableContentBox;
 import com.salesmanager.shop.model.content.box.ReadableContentBox;
+import com.salesmanager.shop.model.entity.ReadableEntityList;
+import com.salesmanager.shop.model.content.ReadableContentEntity;
+import com.salesmanager.shop.model.content.ReadableContentFull;
 import com.salesmanager.shop.model.content.page.PersistableContentPage;
 import com.salesmanager.shop.model.content.page.ReadableContentPage;
-import com.salesmanager.shop.model.entity.ReadableEntityList;
-
-import java.util.List;
-import java.util.Optional;
-
-//TODO above deprecation, use shop model instead of core model
 
 /**
  * Images and files management

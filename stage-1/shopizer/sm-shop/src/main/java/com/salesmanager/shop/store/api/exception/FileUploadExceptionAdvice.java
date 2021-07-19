@@ -1,5 +1,7 @@
 package com.salesmanager.shop.store.api.exception;
 
+import java.util.Optional;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -8,8 +10,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.multipart.MaxUploadSizeExceededException;
-
-import java.util.Optional;
 
 @ControllerAdvice
 public class FileUploadExceptionAdvice {

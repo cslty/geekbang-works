@@ -1,9 +1,8 @@
 package com.salesmanager.core.business.modules.cms.content;
 
+import java.util.List;
 import com.salesmanager.core.business.exception.ServiceException;
 import com.salesmanager.core.model.content.InputContentFile;
-
-import java.util.List;
 
 public interface ImagePut {
 

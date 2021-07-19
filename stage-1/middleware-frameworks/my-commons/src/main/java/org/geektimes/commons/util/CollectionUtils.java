@@ -16,6 +16,8 @@
  */
 package org.geektimes.commons.util;
 
+import org.apache.commons.lang.StringUtils;
+
 import java.util.*;
 
 import static java.util.Collections.emptySet;

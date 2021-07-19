@@ -3,10 +3,10 @@
  */
 package com.salesmanager.core.business.modules.cms.content;
 
+import java.util.Optional;
+
 import com.salesmanager.core.business.exception.ServiceException;
 import com.salesmanager.core.model.content.FileContentType;
-
-import java.util.Optional;
 
 
 /**

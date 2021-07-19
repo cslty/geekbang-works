@@ -1,5 +1,10 @@
 package com.salesmanager.core.business.services.catalog.product.file;
 
+import java.util.Optional;
+
+import javax.inject.Inject;
+import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
 import com.salesmanager.core.business.exception.ServiceException;
 import com.salesmanager.core.business.modules.cms.content.StaticContentFileManager;
 import com.salesmanager.core.business.repositories.catalog.product.file.DigitalProductRepository;
@@ -10,11 +15,6 @@ import com.salesmanager.core.model.catalog.product.file.DigitalProduct;
 import com.salesmanager.core.model.content.FileContentType;
 import com.salesmanager.core.model.content.InputContentFile;
 import com.salesmanager.core.model.merchant.MerchantStore;
-import org.springframework.stereotype.Service;
-import org.springframework.util.Assert;
-
-import javax.inject.Inject;
-import java.util.Optional;
 
 @Service("digitalProductService")
 public class DigitalProductServiceImpl extends SalesManagerEntityServiceImpl<Long, DigitalProduct> 

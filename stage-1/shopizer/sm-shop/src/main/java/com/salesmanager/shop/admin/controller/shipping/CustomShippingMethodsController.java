@@ -432,7 +432,7 @@ public class CustomShippingMethodsController {
 						List<String> countries = quote.getCountries();
 						if(countries!=null) {
 							for(String country : countries) {
-								Map<String,String> entry = new HashMap<String,String>();
+								Map<String,String> entry = new HashMap<String,String> ();
 								entry.put("regionCode", country);
 								entry.put("region", quote.getCustomRegionName());
 								entry.put("country", countriesMap.get(country).getName());

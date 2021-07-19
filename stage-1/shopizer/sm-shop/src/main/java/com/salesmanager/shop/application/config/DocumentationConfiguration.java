@@ -1,27 +1,41 @@
 package com.salesmanager.shop.application.config;
 
+import static io.swagger.models.auth.In.HEADER;
+import static java.util.Collections.singletonList;
+import static org.springframework.http.HttpHeaders.AUTHORIZATION;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RequestMethod;
+
 import springfox.documentation.RequestHandler;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.builders.ResponseMessageBuilder;
 import springfox.documentation.schema.ModelRef;
-import springfox.documentation.service.*;
+import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.ApiKey;
+import springfox.documentation.service.AuthorizationScope;
+import springfox.documentation.service.Contact;
+import springfox.documentation.service.ResponseMessage;
+import springfox.documentation.service.SecurityReference;
+import springfox.documentation.service.SecurityScheme;
+import springfox.documentation.service.VendorExtension;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spi.service.contexts.SecurityContext;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
-
-import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-import static io.swagger.models.auth.In.HEADER;
-import static java.util.Collections.singletonList;
-import static org.springframework.http.HttpHeaders.AUTHORIZATION;
 
 @Configuration
 @EnableSwagger2

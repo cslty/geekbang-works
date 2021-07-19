@@ -1,15 +1,17 @@
 package com.salesmanager.core.business.services.customer.attribute;
 
+import java.util.List;
+
+import javax.inject.Inject;
+
+import org.springframework.stereotype.Service;
+
 import com.salesmanager.core.business.exception.ServiceException;
 import com.salesmanager.core.business.repositories.customer.attribute.CustomerAttributeRepository;
 import com.salesmanager.core.business.services.common.generic.SalesManagerEntityServiceImpl;
 import com.salesmanager.core.model.customer.Customer;
 import com.salesmanager.core.model.customer.attribute.CustomerAttribute;
 import com.salesmanager.core.model.merchant.MerchantStore;
-import org.springframework.stereotype.Service;
-
-import javax.inject.Inject;
-import java.util.List;
 
 
 

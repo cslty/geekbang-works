@@ -1,6 +1,10 @@
 package com.salesmanager.core.business.utils;
 
-import com.salesmanager.core.model.merchant.MerchantStore;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.inject.Inject;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -8,9 +12,7 @@ import org.springframework.cache.Cache;
 import org.springframework.cache.Cache.ValueWrapper;
 import org.springframework.stereotype.Component;
 
-import javax.inject.Inject;
-import java.util.ArrayList;
-import java.util.List;
+import com.salesmanager.core.model.merchant.MerchantStore;
 
 @Component("cache")
 public class CacheUtils {

@@ -1,9 +1,9 @@
 package com.salesmanager.core.business.repositories.catalog.category;
 
+import java.util.List;
+
 import com.salesmanager.core.model.catalog.category.Category;
 import com.salesmanager.core.model.merchant.MerchantStore;
-
-import java.util.List;
 
 public interface CategoryRepositoryCustom {
 

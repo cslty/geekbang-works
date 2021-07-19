@@ -1,7 +1,26 @@
 package com.salesmanager.core.business.modules.cms.content.gcp;
 
+import java.io.IOException;
+import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.apache.commons.collections4.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
 import com.google.api.gax.paging.Page;
-import com.google.cloud.storage.*;
+import com.google.cloud.storage.Blob;
+import com.google.cloud.storage.BlobId;
+import com.google.cloud.storage.BlobInfo;
+import com.google.cloud.storage.Bucket;
+import com.google.cloud.storage.Storage;
+import com.google.cloud.storage.StorageOptions;
 import com.google.cloud.storage.Blob.BlobSourceOption;
 import com.google.cloud.storage.Storage.BlobField;
 import com.google.cloud.storage.Storage.BucketGetOption;
@@ -11,19 +30,6 @@ import com.salesmanager.core.business.modules.cms.impl.CMSManager;
 import com.salesmanager.core.model.content.FileContentType;
 import com.salesmanager.core.model.content.InputContentFile;
 import com.salesmanager.core.model.content.OutputContentFile;
-import org.apache.commons.collections4.CollectionUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
-
-import java.io.IOException;
-import java.net.URLConnection;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 
 /**
  * Content management for a given retailer using GC{ (Google Cloud Platform)

@@ -1,9 +1,9 @@
 package com.salesmanager.core.business.utils.ajax;
 
-import org.json.simple.JSONObject;
-
 import java.util.Map;
 import java.util.Set;
+
+import org.json.simple.JSONObject;
 
 public class AjaxPageableResponse extends AjaxResponse {
 	

@@ -19,6 +19,7 @@ package org.geektimes.cache;
 import javax.cache.CacheException;
 import javax.cache.CacheManager;
 import javax.cache.Caching;
+import javax.cache.annotation.CachePut;
 import javax.cache.configuration.OptionalFeature;
 import javax.cache.spi.CachingProvider;
 import java.io.IOException;
@@ -36,6 +37,7 @@ import java.util.concurrent.ConcurrentMap;
 import java.util.function.Supplier;
 
 import static java.lang.String.format;
+import static java.util.Collections.emptyMap;
 
 /**
  * Configurable {@link CachingProvider}

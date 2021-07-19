@@ -1,9 +1,15 @@
 package com.salesmanager.shop.store.security.services;
 
+import org.apache.commons.lang3.StringUtils;
+import org.passay.CharacterRule;
+import org.passay.EnglishCharacterData;
+import org.passay.LengthRule;
+import org.passay.PasswordData;
+import org.passay.PasswordValidator;
+import org.passay.RuleResult;
+
 import com.salesmanager.core.model.merchant.MerchantStore;
 import com.salesmanager.core.model.reference.language.Language;
-import org.apache.commons.lang3.StringUtils;
-import org.passay.*;
 
 /**
  * Internal credentials service

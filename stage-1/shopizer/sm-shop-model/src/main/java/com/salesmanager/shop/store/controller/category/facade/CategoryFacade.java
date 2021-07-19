@@ -1,5 +1,6 @@
 package com.salesmanager.shop.store.controller.category.facade;
 
+import java.util.List;
 import com.salesmanager.core.model.catalog.category.Category;
 import com.salesmanager.core.model.merchant.MerchantStore;
 import com.salesmanager.core.model.reference.language.Language;
@@ -8,8 +9,6 @@ import com.salesmanager.shop.model.catalog.category.ReadableCategory;
 import com.salesmanager.shop.model.catalog.category.ReadableCategoryList;
 import com.salesmanager.shop.model.catalog.product.attribute.ReadableProductVariant;
 import com.salesmanager.shop.model.entity.ListCriteria;
-
-import java.util.List;
 
 public interface CategoryFacade {
 

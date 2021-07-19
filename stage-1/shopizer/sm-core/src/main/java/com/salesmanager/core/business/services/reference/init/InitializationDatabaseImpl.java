@@ -1,5 +1,16 @@
 package com.salesmanager.core.business.services.reference.init;
 
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import javax.inject.Inject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import com.salesmanager.core.business.exception.ServiceException;
 import com.salesmanager.core.business.services.catalog.product.manufacturer.ManufacturerService;
 import com.salesmanager.core.business.services.catalog.product.type.ProductTypeService;
@@ -34,14 +45,6 @@ import com.salesmanager.core.model.tax.taxclass.TaxClass;
 import com.salesmanager.core.model.user.Group;
 import com.salesmanager.core.model.user.GroupType;
 import com.salesmanager.core.model.user.Permission;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-import javax.inject.Inject;
-import java.sql.Date;
-import java.util.*;
 
 @Service("initializationDatabase")
 public class InitializationDatabaseImpl implements InitializationDatabase {

@@ -1,11 +1,10 @@
 package com.salesmanager.shop.admin.model.catalog;
 
-import com.salesmanager.core.model.catalog.category.CategoryDescription;
-
-import javax.validation.Valid;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import javax.validation.Valid;
+import com.salesmanager.core.model.catalog.category.CategoryDescription;
 
 /**
  * Wrapper to ease admin jstl

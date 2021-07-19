@@ -1,14 +1,16 @@
 package com.salesmanager.shop.utils;
 
+import java.util.Properties;
+
+import javax.annotation.Resource;
+
+import org.apache.commons.lang3.StringUtils;
+
 import com.salesmanager.core.model.catalog.product.Product;
 import com.salesmanager.core.model.catalog.product.manufacturer.Manufacturer;
 import com.salesmanager.core.model.content.FileContentType;
 import com.salesmanager.core.model.merchant.MerchantStore;
 import com.salesmanager.shop.constants.Constants;
-import org.apache.commons.lang3.StringUtils;
-
-import javax.annotation.Resource;
-import java.util.Properties;
 
 
 

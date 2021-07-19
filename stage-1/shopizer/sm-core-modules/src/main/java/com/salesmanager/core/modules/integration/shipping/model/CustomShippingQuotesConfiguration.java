@@ -1,11 +1,11 @@
 package com.salesmanager.core.modules.integration.shipping.model;
 
-import com.salesmanager.core.model.system.CustomIntegrationConfiguration;
-import com.salesmanager.core.model.system.IntegrationConfiguration;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
+import com.salesmanager.core.model.system.CustomIntegrationConfiguration;
+import com.salesmanager.core.model.system.IntegrationConfiguration;
 
 public class CustomShippingQuotesConfiguration extends IntegrationConfiguration implements CustomIntegrationConfiguration, Serializable {
 	

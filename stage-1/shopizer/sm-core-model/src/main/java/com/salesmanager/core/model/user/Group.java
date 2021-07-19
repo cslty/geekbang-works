@@ -1,15 +1,32 @@
 package com.salesmanager.core.model.user;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Index;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+import javax.persistence.TableGenerator;
+import javax.validation.constraints.NotEmpty;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.salesmanager.core.constants.SchemaConstant;
 import com.salesmanager.core.model.common.audit.AuditListener;
 import com.salesmanager.core.model.common.audit.AuditSection;
 import com.salesmanager.core.model.common.audit.Auditable;
 import com.salesmanager.core.model.generic.SalesManagerEntity;
-
-import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @EntityListeners(value = AuditListener.class)

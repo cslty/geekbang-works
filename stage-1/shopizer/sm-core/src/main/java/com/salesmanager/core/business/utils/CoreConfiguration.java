@@ -1,10 +1,10 @@
 package com.salesmanager.core.business.utils;
 
+import java.util.Properties;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-
-import java.util.Properties;
 
 @Component
 public class CoreConfiguration {

@@ -16,6 +16,7 @@
  */
 package org.geektimes.commons.reflect.util;
 
+import javax.annotation.Priority;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Array;
 import java.math.BigDecimal;

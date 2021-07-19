@@ -1,11 +1,12 @@
 package com.salesmanager.core.business.repositories.catalog.category;
 
-import com.salesmanager.core.model.catalog.category.Category;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import java.util.List;
-import java.util.Optional;
+import com.salesmanager.core.model.catalog.category.Category;
 
 
 public interface CategoryRepository extends JpaRepository<Category, Long>, CategoryRepositoryCustom {

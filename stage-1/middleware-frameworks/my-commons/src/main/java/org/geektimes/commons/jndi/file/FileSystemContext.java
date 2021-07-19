@@ -28,6 +28,7 @@ import java.util.Hashtable;
 import java.util.Map;
 
 import static org.apache.commons.io.FileUtils.readFileToByteArray;
+import static org.geektimes.commons.function.ThrowableAction.execute;
 import static org.geektimes.commons.function.ThrowableSupplier.execute;
 
 /**
@@ -133,7 +134,6 @@ class FileSystemContext implements Context {
             Serializer serializer = serializers.getMostCompatible(objClass);
             byte[] bytes = serializer.serialize(obj);
             FileUtils.writeByteArrayToFile(targetFile, bytes);
-            return null;
         }, NamingException.class);
     }
 

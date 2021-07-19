@@ -1,20 +1,22 @@
 package com.salesmanager.shop.tags;
 
-import com.salesmanager.core.model.catalog.product.file.DigitalProduct;
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.shop.constants.Constants;
-import com.salesmanager.shop.utils.FilePathUtils;
+import java.util.Map;
+
+import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import javax.servlet.jsp.JspException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.tags.RequestContextAwareTag;
 
-import javax.inject.Inject;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import javax.servlet.jsp.JspException;
-import java.util.Map;
+import com.salesmanager.core.model.catalog.product.file.DigitalProduct;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.shop.constants.Constants;
+import com.salesmanager.shop.utils.FilePathUtils;
 
 
 

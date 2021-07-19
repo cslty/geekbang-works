@@ -1,21 +1,24 @@
 package com.salesmanager.shop.store.security;
 
-import com.salesmanager.core.model.common.UserContext;
-import com.salesmanager.shop.store.security.common.CustomAuthenticationManager;
-import com.salesmanager.shop.utils.GeoLocationUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.filter.OncePerRequestFilter;
+import java.io.IOException;
+import java.util.Enumeration;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.inject.Inject;
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.util.Enumeration;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.filter.OncePerRequestFilter;
+
+import com.salesmanager.core.model.common.UserContext;
+import com.salesmanager.shop.store.security.common.CustomAuthenticationManager;
+import com.salesmanager.shop.utils.GeoLocationUtils;
 
 
 public class AuthenticationTokenFilter extends OncePerRequestFilter {

@@ -1,14 +1,20 @@
 package com.salesmanager.core.business.services.content;
 
-import com.salesmanager.core.business.exception.ServiceException;
-import com.salesmanager.core.business.services.common.generic.SalesManagerEntityService;
-import com.salesmanager.core.model.content.*;
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.core.model.reference.language.Language;
-import org.springframework.data.domain.Page;
-
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.data.domain.Page;
+
+import com.salesmanager.core.business.exception.ServiceException;
+import com.salesmanager.core.business.services.common.generic.SalesManagerEntityService;
+import com.salesmanager.core.model.content.Content;
+import com.salesmanager.core.model.content.ContentDescription;
+import com.salesmanager.core.model.content.ContentType;
+import com.salesmanager.core.model.content.FileContentType;
+import com.salesmanager.core.model.content.InputContentFile;
+import com.salesmanager.core.model.content.OutputContentFile;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.reference.language.Language;
 
 
 /**

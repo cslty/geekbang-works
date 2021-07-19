@@ -1,7 +1,8 @@
 package com.salesmanager.shop.store.security;
 
-import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
+
+import javax.validation.constraints.NotEmpty;
 
 public class AuthenticationRequest implements Serializable {
 

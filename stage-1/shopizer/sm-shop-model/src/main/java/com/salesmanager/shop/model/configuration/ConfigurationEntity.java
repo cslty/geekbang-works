@@ -1,10 +1,10 @@
 package com.salesmanager.shop.model.configuration;
 
-import com.salesmanager.shop.model.entity.Entity;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.salesmanager.shop.model.entity.Entity;
 
 public class ConfigurationEntity extends Entity {
 

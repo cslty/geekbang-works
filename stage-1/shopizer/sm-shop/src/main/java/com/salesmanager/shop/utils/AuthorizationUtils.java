@@ -1,14 +1,16 @@
 package com.salesmanager.shop.utils;
 
+import java.util.Arrays;
+import java.util.List;
+
+import javax.inject.Inject;
+
+import org.springframework.stereotype.Component;
+
 import com.salesmanager.core.model.merchant.MerchantStore;
 import com.salesmanager.shop.constants.Constants;
 import com.salesmanager.shop.store.api.exception.UnauthorizedException;
 import com.salesmanager.shop.store.controller.user.facade.UserFacade;
-import org.springframework.stereotype.Component;
-
-import javax.inject.Inject;
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * Performs authorization check for REST Api

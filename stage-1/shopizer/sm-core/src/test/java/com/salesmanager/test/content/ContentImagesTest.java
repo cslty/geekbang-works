@@ -1,16 +1,25 @@
 package com.salesmanager.test.content;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+import javax.inject.Inject;
+
+import org.apache.commons.io.IOUtils;
+import org.junit.Ignore;
+
 import com.salesmanager.core.business.exception.ServiceException;
 import com.salesmanager.core.business.services.content.ContentService;
 import com.salesmanager.core.model.content.FileContentType;
 import com.salesmanager.core.model.content.InputContentFile;
 import com.salesmanager.core.model.content.OutputContentFile;
 import com.salesmanager.core.model.merchant.MerchantStore;
-import org.apache.commons.io.IOUtils;
-import org.junit.Ignore;
-
-import javax.inject.Inject;
-import java.io.*;
 
 /**
  * Test content with CMS store logo

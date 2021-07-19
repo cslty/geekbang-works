@@ -1,21 +1,23 @@
 package com.salesmanager.test.utils;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.Map;
+
+import javax.inject.Inject;
+
+import org.junit.Ignore;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.salesmanager.core.business.exception.ServiceException;
 import com.salesmanager.core.business.services.reference.loader.IntegrationModulesLoader;
 import com.salesmanager.core.business.services.system.ModuleConfigurationService;
 import com.salesmanager.core.model.system.IntegrationModule;
 import com.salesmanager.test.configuration.ConfigurationTest;
-import org.junit.Ignore;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import javax.inject.Inject;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.util.Map;
 
 
 

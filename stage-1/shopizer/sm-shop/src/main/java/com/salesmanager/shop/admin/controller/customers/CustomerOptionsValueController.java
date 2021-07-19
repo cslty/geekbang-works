@@ -88,7 +88,7 @@ public class CustomerOptionsValueController {
 		return displayOption(null,request,response,model,locale);
 	}
 	
-	private String displayOption(Long id, HttpServletRequest request, HttpServletResponse response, Model model, Locale locale) throws Exception {
+	private String displayOption(Long id, HttpServletRequest request, HttpServletResponse response,Model model,Locale locale) throws Exception {
 
 		this.setMenu(model, request);
 		MerchantStore store = (MerchantStore)request.getAttribute(Constants.ADMIN_STORE);

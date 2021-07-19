@@ -2,15 +2,16 @@ package com.salesmanager.core.business.services.customer.optin;
 
 
 
+import javax.inject.Inject;
+
+import org.apache.commons.lang3.Validate;
+import org.springframework.stereotype.Service;
+
 import com.salesmanager.core.business.exception.ServiceException;
 import com.salesmanager.core.business.repositories.customer.optin.CustomerOptinRepository;
 import com.salesmanager.core.business.services.common.generic.SalesManagerEntityServiceImpl;
 import com.salesmanager.core.model.merchant.MerchantStore;
 import com.salesmanager.core.model.system.optin.CustomerOptin;
-import org.apache.commons.lang3.Validate;
-import org.springframework.stereotype.Service;
-
-import javax.inject.Inject;
 
 
 @Service

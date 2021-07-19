@@ -1,16 +1,17 @@
 package com.salesmanager.core.business.repositories.content;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+
 import com.salesmanager.core.model.content.Content;
 import com.salesmanager.core.model.content.ContentDescription;
 import com.salesmanager.core.model.content.ContentType;
 import com.salesmanager.core.model.merchant.MerchantStore;
 import com.salesmanager.core.model.reference.language.Language;
-
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class ContentRepositoryImpl implements ContentRepositoryCustom {

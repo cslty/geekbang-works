@@ -1,14 +1,12 @@
 package com.salesmanager.core.business.modules.email;
 
-import freemarker.template.Configuration;
-import freemarker.template.Template;
-import freemarker.template.TemplateException;
-import org.springframework.mail.MailPreparationException;
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.JavaMailSenderImpl;
-import org.springframework.mail.javamail.MimeMessagePreparator;
-import org.springframework.stereotype.Component;
-
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.StringWriter;
+import java.util.Map;
+import java.util.Properties;
 import javax.inject.Inject;
 import javax.mail.BodyPart;
 import javax.mail.Message;
@@ -18,9 +16,14 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
-import java.io.*;
-import java.util.Map;
-import java.util.Properties;
+import org.springframework.mail.MailPreparationException;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
+import org.springframework.mail.javamail.MimeMessagePreparator;
+import org.springframework.stereotype.Component;
+import freemarker.template.Configuration;
+import freemarker.template.Template;
+import freemarker.template.TemplateException;
 
 @Component("defaultEmailSender")
 public class DefaultEmailSenderImpl implements EmailModule {

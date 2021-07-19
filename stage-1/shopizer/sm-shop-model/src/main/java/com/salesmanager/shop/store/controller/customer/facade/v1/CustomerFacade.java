@@ -1,10 +1,10 @@
 package com.salesmanager.shop.store.controller.customer.facade.v1;
 
+import java.security.Principal;
+
 import com.salesmanager.core.model.customer.Customer;
 import com.salesmanager.core.model.merchant.MerchantStore;
 import com.salesmanager.core.model.reference.language.Language;
-
-import java.security.Principal;
 
 public interface CustomerFacade {
 	

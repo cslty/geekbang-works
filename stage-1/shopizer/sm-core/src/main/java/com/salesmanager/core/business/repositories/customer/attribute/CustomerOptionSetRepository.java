@@ -1,10 +1,11 @@
 package com.salesmanager.core.business.repositories.customer.attribute;
 
-import com.salesmanager.core.model.customer.attribute.CustomerOptionSet;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import java.util.List;
+import com.salesmanager.core.model.customer.attribute.CustomerOptionSet;
 
 public interface CustomerOptionSetRepository extends JpaRepository<CustomerOptionSet, Long> {
 

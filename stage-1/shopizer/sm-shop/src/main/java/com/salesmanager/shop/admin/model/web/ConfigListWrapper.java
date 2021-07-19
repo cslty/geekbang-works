@@ -1,8 +1,8 @@
 package com.salesmanager.shop.admin.model.web;
 
-import com.salesmanager.core.model.system.MerchantConfiguration;
-
 import java.util.List;
+
+import com.salesmanager.core.model.system.MerchantConfiguration;
 
 
 

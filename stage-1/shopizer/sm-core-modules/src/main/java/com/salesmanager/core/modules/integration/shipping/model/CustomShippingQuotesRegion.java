@@ -1,8 +1,8 @@
 package com.salesmanager.core.modules.integration.shipping.model;
 
-import org.json.simple.JSONAware;
-
 import java.util.List;
+
+import org.json.simple.JSONAware;
 
 public class CustomShippingQuotesRegion implements JSONAware {
 	

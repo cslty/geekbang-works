@@ -45,6 +45,13 @@
             <artifactId>microprofile-fault-tolerance-api</artifactId>
         </dependency>
 
+        <!-- Internal commons -->
+        <dependency>
+            <groupId>org.geekbang.projects</groupId>
+            <artifactId>my-commons</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
         <!-- JAX-RS API -->
         <dependency>
             <groupId>javax.ws.rs</groupId>
@@ -94,12 +101,6 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.kie</groupId>
-            <artifactId>kie-api</artifactId>
-            <version>7.32.0.Final</version>
             <scope>test</scope>
         </dependency>
 

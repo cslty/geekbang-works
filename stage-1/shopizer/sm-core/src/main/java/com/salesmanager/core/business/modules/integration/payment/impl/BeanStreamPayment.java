@@ -1,24 +1,5 @@
 package com.salesmanager.core.business.modules.integration.payment.impl;
 
-import com.salesmanager.core.business.services.system.MerchantLogService;
-import com.salesmanager.core.business.utils.CreditCardUtils;
-import com.salesmanager.core.business.utils.ProductPriceUtils;
-import com.salesmanager.core.model.customer.Customer;
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.core.model.order.Order;
-import com.salesmanager.core.model.payments.*;
-import com.salesmanager.core.model.shoppingcart.ShoppingCartItem;
-import com.salesmanager.core.model.system.IntegrationConfiguration;
-import com.salesmanager.core.model.system.IntegrationModule;
-import com.salesmanager.core.model.system.MerchantLog;
-import com.salesmanager.core.model.system.ModuleConfig;
-import com.salesmanager.core.modules.integration.IntegrationException;
-import com.salesmanager.core.modules.integration.payment.model.PaymentModule;
-import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import javax.inject.Inject;
 import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -27,7 +8,38 @@ import java.math.BigDecimal;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLDecoder;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.StringTokenizer;
+import java.util.UUID;
+
+import javax.inject.Inject;
+
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.salesmanager.core.business.services.system.MerchantLogService;
+import com.salesmanager.core.business.utils.CreditCardUtils;
+import com.salesmanager.core.business.utils.ProductPriceUtils;
+import com.salesmanager.core.model.customer.Customer;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.order.Order;
+import com.salesmanager.core.model.payments.CreditCardPayment;
+import com.salesmanager.core.model.payments.Payment;
+import com.salesmanager.core.model.payments.PaymentType;
+import com.salesmanager.core.model.payments.Transaction;
+import com.salesmanager.core.model.payments.TransactionType;
+import com.salesmanager.core.model.shoppingcart.ShoppingCartItem;
+import com.salesmanager.core.model.system.IntegrationConfiguration;
+import com.salesmanager.core.model.system.IntegrationModule;
+import com.salesmanager.core.model.system.MerchantLog;
+import com.salesmanager.core.model.system.ModuleConfig;
+import com.salesmanager.core.modules.integration.IntegrationException;
+import com.salesmanager.core.modules.integration.payment.model.PaymentModule;
 
 
 public class BeanStreamPayment implements PaymentModule {

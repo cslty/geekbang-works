@@ -1,6 +1,19 @@
 package com.salesmanager.core.business.modules.integration.payment.impl;
 
-import com.braintreegateway.*;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Validate;
+
+import com.braintreegateway.BraintreeGateway;
+import com.braintreegateway.Environment;
+import com.braintreegateway.Result;
+import com.braintreegateway.TransactionRequest;
+import com.braintreegateway.ValidationError;
 import com.salesmanager.core.model.customer.Customer;
 import com.salesmanager.core.model.merchant.MerchantStore;
 import com.salesmanager.core.model.order.Order;
@@ -13,14 +26,6 @@ import com.salesmanager.core.model.system.IntegrationConfiguration;
 import com.salesmanager.core.model.system.IntegrationModule;
 import com.salesmanager.core.modules.integration.IntegrationException;
 import com.salesmanager.core.modules.integration.payment.model.PaymentModule;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.Validate;
-
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
 
 public class BraintreePayment implements PaymentModule {
 

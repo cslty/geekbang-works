@@ -1,8 +1,8 @@
 package com.salesmanager.shop.model.customer;
 
-import com.salesmanager.shop.model.entity.Entity;
-
 import java.io.Serializable;
+
+import com.salesmanager.shop.model.entity.Entity;
 
 
 public class Customer extends Entity implements Serializable {

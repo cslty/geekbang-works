@@ -1,12 +1,11 @@
 package com.salesmanager.shop.utils;
 
-import com.salesmanager.core.model.catalog.category.Category;
-import com.salesmanager.core.model.catalog.category.CategoryDescription;
-import com.salesmanager.core.model.reference.language.Language;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import com.salesmanager.core.model.catalog.category.Category;
+import com.salesmanager.core.model.catalog.category.CategoryDescription;
+import com.salesmanager.core.model.reference.language.Language;
 
 public class CategoryUtils {
   

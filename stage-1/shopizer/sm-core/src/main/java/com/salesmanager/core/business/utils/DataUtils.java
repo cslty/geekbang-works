@@ -1,9 +1,9 @@
 package com.salesmanager.core.business.utils;
 
+import java.math.BigDecimal;
+
 import com.salesmanager.core.constants.MeasureUnit;
 import com.salesmanager.core.model.merchant.MerchantStore;
-
-import java.math.BigDecimal;
 
 public class DataUtils {
 	

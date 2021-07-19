@@ -1,8 +1,8 @@
 package com.salesmanager.shop.model.customer.optin;
 
-import com.salesmanager.shop.model.entity.Entity;
-
 import java.io.Serializable;
+
+import com.salesmanager.shop.model.entity.Entity;
 
 public class CustomerOptin extends Entity implements Serializable {
 

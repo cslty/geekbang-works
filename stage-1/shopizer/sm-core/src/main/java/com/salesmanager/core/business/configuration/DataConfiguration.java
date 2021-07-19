@@ -1,6 +1,9 @@
 package com.salesmanager.core.business.configuration;
 
-import com.zaxxer.hikari.HikariDataSource;
+import java.util.Properties;
+
+import javax.persistence.EntityManagerFactory;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.cache.annotation.EnableCaching;
@@ -11,8 +14,7 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 
-import javax.persistence.EntityManagerFactory;
-import java.util.Properties;
+import com.zaxxer.hikari.HikariDataSource;
 
 
 @Configuration

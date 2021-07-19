@@ -3,6 +3,21 @@
  */
 package com.salesmanager.core.business.modules.cms.content.local;
 
+import java.io.IOException;
+import java.net.URLConnection;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import javax.annotation.PostConstruct;
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import com.salesmanager.core.business.constants.Constants;
 import com.salesmanager.core.business.exception.ServiceException;
 import com.salesmanager.core.business.modules.cms.content.ContentAssetsManager;
@@ -11,17 +26,6 @@ import com.salesmanager.core.business.modules.cms.impl.LocalCacheManagerImpl;
 import com.salesmanager.core.model.content.FileContentType;
 import com.salesmanager.core.model.content.InputContentFile;
 import com.salesmanager.core.model.content.OutputContentFile;
-import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import javax.annotation.PostConstruct;
-import java.io.IOException;
-import java.net.URLConnection;
-import java.nio.file.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 
 /**
  * Manages - Images - Files (js, pdf, css...) on a local web server

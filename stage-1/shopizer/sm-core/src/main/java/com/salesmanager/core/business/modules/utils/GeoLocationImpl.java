@@ -1,14 +1,15 @@
 package com.salesmanager.core.business.modules.utils;
 
+import java.net.InetAddress;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.maxmind.geoip2.DatabaseReader;
 import com.maxmind.geoip2.model.CityResponse;
 import com.salesmanager.core.business.exception.ServiceException;
 import com.salesmanager.core.model.common.Address;
 import com.salesmanager.core.modules.utils.GeoLocation;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.net.InetAddress;
 
 /**
  * Using Geolite2 City database

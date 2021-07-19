@@ -1,13 +1,17 @@
 package com.salesmanager.core.business.utils;
 
-import com.salesmanager.core.business.constants.Constants;
-import com.salesmanager.core.model.catalog.product.Product;
-import com.salesmanager.core.model.catalog.product.attribute.*;
-import com.salesmanager.core.model.catalog.product.availability.ProductAvailability;
-
 import java.util.HashSet;
 import java.util.Locale;
 import java.util.Set;
+
+import com.salesmanager.core.business.constants.Constants;
+import com.salesmanager.core.model.catalog.product.Product;
+import com.salesmanager.core.model.catalog.product.attribute.ProductAttribute;
+import com.salesmanager.core.model.catalog.product.attribute.ProductOption;
+import com.salesmanager.core.model.catalog.product.attribute.ProductOptionDescription;
+import com.salesmanager.core.model.catalog.product.attribute.ProductOptionValue;
+import com.salesmanager.core.model.catalog.product.attribute.ProductOptionValueDescription;
+import com.salesmanager.core.model.catalog.product.availability.ProductAvailability;
 
 
 public class CatalogServiceHelper {

@@ -1,9 +1,8 @@
 package com.salesmanager.core.business.modules.email;
 
+import javax.inject.Inject;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-
-import javax.inject.Inject;
 
 @Component("htmlEmailSender")
 public class EmailComponent implements HtmlEmailSender {

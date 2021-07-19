@@ -1,11 +1,12 @@
 package com.salesmanager.core.business.modules.utils;
 
-import com.salesmanager.core.modules.utils.Encryption;
-import org.apache.commons.lang3.StringUtils;
-
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
+
+import org.apache.commons.lang3.StringUtils;
+
+import com.salesmanager.core.modules.utils.Encryption;
 
 public final class EncryptionImpl implements Encryption {
 	

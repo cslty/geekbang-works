@@ -1,10 +1,11 @@
 package com.salesmanager.core.business.repositories.customer.review;
 
-import com.salesmanager.core.model.customer.review.CustomerReview;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import java.util.List;
+import com.salesmanager.core.model.customer.review.CustomerReview;
 
 public interface CustomerReviewRepository extends JpaRepository<CustomerReview, Long> {
 	

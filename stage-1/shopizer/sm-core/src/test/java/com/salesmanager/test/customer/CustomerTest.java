@@ -1,22 +1,28 @@
 package com.salesmanager.test.customer;
 
+import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import org.junit.Ignore;
+import org.junit.Test;
+
 import com.salesmanager.core.business.exception.ServiceException;
 import com.salesmanager.core.model.common.Billing;
 import com.salesmanager.core.model.common.Delivery;
 import com.salesmanager.core.model.customer.Customer;
 import com.salesmanager.core.model.customer.CustomerGender;
-import com.salesmanager.core.model.customer.attribute.*;
+import com.salesmanager.core.model.customer.attribute.CustomerAttribute;
+import com.salesmanager.core.model.customer.attribute.CustomerOption;
+import com.salesmanager.core.model.customer.attribute.CustomerOptionDescription;
+import com.salesmanager.core.model.customer.attribute.CustomerOptionSet;
+import com.salesmanager.core.model.customer.attribute.CustomerOptionValue;
+import com.salesmanager.core.model.customer.attribute.CustomerOptionValueDescription;
 import com.salesmanager.core.model.merchant.MerchantStore;
 import com.salesmanager.core.model.reference.country.Country;
 import com.salesmanager.core.model.reference.language.Language;
 import com.salesmanager.core.model.reference.zone.Zone;
-import org.junit.Ignore;
-import org.junit.Test;
-
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 
 

@@ -1,10 +1,10 @@
 package com.salesmanager.core.model.search;
 
+import java.util.List;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONAware;
 import org.json.simple.JSONObject;
-
-import java.util.List;
 
 public class IndexProduct implements JSONAware {
 	

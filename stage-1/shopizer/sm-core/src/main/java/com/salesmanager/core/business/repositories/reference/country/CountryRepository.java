@@ -1,10 +1,11 @@
 package com.salesmanager.core.business.repositories.reference.country;
 
-import com.salesmanager.core.model.reference.country.Country;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import java.util.List;
+import com.salesmanager.core.model.reference.country.Country;
 
 
 public interface CountryRepository extends JpaRepository <Country, Integer> {

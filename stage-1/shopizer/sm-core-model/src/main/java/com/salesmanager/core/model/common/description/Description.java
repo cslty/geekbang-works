@@ -1,15 +1,27 @@
 package com.salesmanager.core.model.common.description;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.EntityListeners;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.MappedSuperclass;
+import javax.validation.constraints.NotEmpty;
+
+import org.hibernate.annotations.Type;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.salesmanager.core.model.common.audit.AuditListener;
 import com.salesmanager.core.model.common.audit.AuditSection;
 import com.salesmanager.core.model.common.audit.Auditable;
 import com.salesmanager.core.model.reference.language.Language;
-import org.hibernate.annotations.Type;
-
-import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
-import java.io.Serializable;
 
 @MappedSuperclass
 @EntityListeners(value = AuditListener.class)

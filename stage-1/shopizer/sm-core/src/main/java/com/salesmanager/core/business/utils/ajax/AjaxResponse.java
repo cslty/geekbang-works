@@ -1,10 +1,14 @@
 package com.salesmanager.core.business.utils.ajax;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 import org.apache.commons.collections4.CollectionUtils;
 import org.json.simple.JSONAware;
 import org.json.simple.JSONObject;
-
-import java.util.*;
 
 public class AjaxResponse implements JSONAware {
 	

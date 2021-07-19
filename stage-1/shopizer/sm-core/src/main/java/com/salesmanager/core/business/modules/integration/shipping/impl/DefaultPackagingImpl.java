@@ -1,5 +1,12 @@
 package com.salesmanager.core.business.modules.integration.shipping.impl;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import javax.inject.Inject;
+
 import com.salesmanager.core.business.exception.ServiceException;
 import com.salesmanager.core.business.services.shipping.ShippingService;
 import com.salesmanager.core.business.services.system.MerchantLogService;
@@ -11,12 +18,6 @@ import com.salesmanager.core.model.shipping.ShippingConfiguration;
 import com.salesmanager.core.model.shipping.ShippingProduct;
 import com.salesmanager.core.model.system.MerchantLog;
 import com.salesmanager.core.modules.integration.shipping.model.Packaging;
-
-import javax.inject.Inject;
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
 
 public class DefaultPackagingImpl implements Packaging {
 

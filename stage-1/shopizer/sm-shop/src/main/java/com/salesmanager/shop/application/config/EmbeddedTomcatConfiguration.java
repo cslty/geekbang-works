@@ -16,7 +16,6 @@
  */
 package com.salesmanager.shop.application.config;
 
-import org.apache.catalina.core.StandardContext;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.BeanClassLoaderAware;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
@@ -45,10 +44,7 @@ public class EmbeddedTomcatConfiguration implements BeanClassLoaderAware {
         return factory -> {
             if (webappDirectory != null) {
                 factory.addContextCustomizers(context -> {
-                    if (context instanceof StandardContext) {
-                        StandardContext standardContext = (StandardContext) context;
-                        standardContext.setDocBase(webappDirectory.getAbsolutePath());
-                    }
+                    context.setDocBase(webappDirectory.getAbsolutePath());
                 });
             }
         };

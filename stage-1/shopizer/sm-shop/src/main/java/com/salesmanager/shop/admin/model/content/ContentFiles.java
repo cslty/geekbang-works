@@ -3,8 +3,10 @@
  */
 package com.salesmanager.shop.admin.model.content;
 
+import javax.validation.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.validation.Valid;
 import java.io.Serializable;
 import java.util.List;
 

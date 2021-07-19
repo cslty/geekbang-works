@@ -5,6 +5,8 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+import com.salesmanager.core.constants.SchemaConstant;
+
 @Deprecated
 @MappedSuperclass
 @Table(name="USERCONNECTION", uniqueConstraints = { @UniqueConstraint(columnNames = { "userId",

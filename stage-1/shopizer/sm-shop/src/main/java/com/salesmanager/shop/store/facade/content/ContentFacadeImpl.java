@@ -1,14 +1,42 @@
 package com.salesmanager.shop.store.facade.content;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+import javax.inject.Inject;
+
+import org.apache.commons.lang3.StringUtils;
+import org.jsoup.helper.Validate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Component;
+import org.springframework.util.CollectionUtils;
+
 import com.salesmanager.core.business.exception.ServiceException;
 import com.salesmanager.core.business.services.content.ContentService;
 import com.salesmanager.core.business.services.reference.language.LanguageService;
 import com.salesmanager.core.model.content.Content;
-import com.salesmanager.core.model.content.*;
+import com.salesmanager.core.model.content.ContentDescription;
+import com.salesmanager.core.model.content.ContentType;
+import com.salesmanager.core.model.content.FileContentType;
+import com.salesmanager.core.model.content.InputContentFile;
+import com.salesmanager.core.model.content.OutputContentFile;
 import com.salesmanager.core.model.merchant.MerchantStore;
 import com.salesmanager.core.model.reference.language.Language;
+import com.salesmanager.shop.model.content.ContentDescriptionEntity;
 import com.salesmanager.shop.model.content.ContentFile;
-import com.salesmanager.shop.model.content.*;
+import com.salesmanager.shop.model.content.ContentFolder;
+import com.salesmanager.shop.model.content.ContentImage;
+import com.salesmanager.shop.model.content.ReadableContentEntity;
+import com.salesmanager.shop.model.content.ReadableContentFull;
 import com.salesmanager.shop.model.content.box.PersistableContentBox;
 import com.salesmanager.shop.model.content.box.ReadableContentBox;
 import com.salesmanager.shop.model.content.box.ReadableContentBoxFull;
@@ -22,24 +50,6 @@ import com.salesmanager.shop.store.api.exception.ServiceRuntimeException;
 import com.salesmanager.shop.store.controller.content.facade.ContentFacade;
 import com.salesmanager.shop.utils.FilePathUtils;
 import com.salesmanager.shop.utils.ImageFilePath;
-import org.apache.commons.lang3.StringUtils;
-import org.jsoup.helper.Validate;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.data.domain.Page;
-import org.springframework.stereotype.Component;
-import org.springframework.util.CollectionUtils;
-
-import javax.inject.Inject;
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Component("contentFacade")
 public class ContentFacadeImpl implements ContentFacade {

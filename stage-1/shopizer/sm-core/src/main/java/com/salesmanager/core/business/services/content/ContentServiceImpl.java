@@ -1,13 +1,15 @@
 package com.salesmanager.core.business.services.content;
 
-import com.salesmanager.core.business.exception.ServiceException;
-import com.salesmanager.core.business.modules.cms.content.StaticContentFileManager;
-import com.salesmanager.core.business.repositories.content.ContentRepository;
-import com.salesmanager.core.business.repositories.content.PageContentRepository;
-import com.salesmanager.core.business.services.common.generic.SalesManagerEntityServiceImpl;
-import com.salesmanager.core.model.content.*;
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.core.model.reference.language.Language;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.net.URLConnection;
+import java.util.List;
+import java.util.Optional;
+import java.util.regex.Pattern;
+
+import javax.inject.Inject;
+
 import org.apache.commons.lang3.Validate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,14 +20,19 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
-import javax.inject.Inject;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.net.URLConnection;
-import java.util.List;
-import java.util.Optional;
-import java.util.regex.Pattern;
+import com.salesmanager.core.business.exception.ServiceException;
+import com.salesmanager.core.business.modules.cms.content.StaticContentFileManager;
+import com.salesmanager.core.business.repositories.content.ContentRepository;
+import com.salesmanager.core.business.repositories.content.PageContentRepository;
+import com.salesmanager.core.business.services.common.generic.SalesManagerEntityServiceImpl;
+import com.salesmanager.core.model.content.Content;
+import com.salesmanager.core.model.content.ContentDescription;
+import com.salesmanager.core.model.content.ContentType;
+import com.salesmanager.core.model.content.FileContentType;
+import com.salesmanager.core.model.content.InputContentFile;
+import com.salesmanager.core.model.content.OutputContentFile;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.core.model.reference.language.Language;
 
 @Service("contentService")
 public class ContentServiceImpl extends SalesManagerEntityServiceImpl<Long, Content> implements ContentService {

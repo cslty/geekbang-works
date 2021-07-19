@@ -1,14 +1,14 @@
 package com.salesmanager.core.business.modules.cms.content;
 
+import java.io.ByteArrayOutputStream;
+import java.io.Serializable;
 import com.salesmanager.core.business.constants.Constants;
 import com.salesmanager.core.business.modules.cms.common.AssetsManager;
 import com.salesmanager.core.business.modules.cms.impl.CMSManager;
 import com.salesmanager.core.model.content.FileContentType;
 import com.salesmanager.core.model.content.OutputContentFile;
-import org.apache.commons.lang3.StringUtils;
 
-import java.io.ByteArrayOutputStream;
-import java.io.Serializable;
+import org.apache.commons.lang3.StringUtils;
 
 public interface ContentAssetsManager extends AssetsManager, FileGet, FilePut, FileRemove, FolderPut, FolderList, FolderRemove, Serializable {
     public static final char UNIX_SEPARATOR = '/';

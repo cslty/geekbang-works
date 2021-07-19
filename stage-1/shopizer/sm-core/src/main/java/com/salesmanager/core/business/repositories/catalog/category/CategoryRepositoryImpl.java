@@ -1,13 +1,14 @@
 package com.salesmanager.core.business.repositories.catalog.category;
 
-import com.salesmanager.core.model.catalog.category.Category;
-import com.salesmanager.core.model.merchant.MerchantStore;
+import java.util.Date;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import java.util.Date;
-import java.util.List;
+
+import com.salesmanager.core.model.catalog.category.Category;
+import com.salesmanager.core.model.merchant.MerchantStore;
 
 
 public class CategoryRepositoryImpl implements CategoryRepositoryCustom {

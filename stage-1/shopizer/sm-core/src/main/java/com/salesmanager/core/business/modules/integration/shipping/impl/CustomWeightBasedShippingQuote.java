@@ -1,12 +1,26 @@
 package com.salesmanager.core.business.modules.integration.shipping.impl;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+
+import javax.inject.Inject;
+
+import org.apache.commons.lang3.StringUtils;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.salesmanager.core.business.exception.ServiceException;
 import com.salesmanager.core.business.services.system.MerchantConfigurationService;
 import com.salesmanager.core.business.utils.ProductPriceUtils;
 import com.salesmanager.core.model.common.Delivery;
 import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.core.model.shipping.*;
+import com.salesmanager.core.model.shipping.PackageDetails;
+import com.salesmanager.core.model.shipping.ShippingBasisType;
+import com.salesmanager.core.model.shipping.ShippingConfiguration;
+import com.salesmanager.core.model.shipping.ShippingOption;
+import com.salesmanager.core.model.shipping.ShippingOrigin;
+import com.salesmanager.core.model.shipping.ShippingQuote;
 import com.salesmanager.core.model.system.CustomIntegrationConfiguration;
 import com.salesmanager.core.model.system.IntegrationConfiguration;
 import com.salesmanager.core.model.system.IntegrationModule;
@@ -16,13 +30,6 @@ import com.salesmanager.core.modules.integration.shipping.model.CustomShippingQu
 import com.salesmanager.core.modules.integration.shipping.model.CustomShippingQuotesConfiguration;
 import com.salesmanager.core.modules.integration.shipping.model.CustomShippingQuotesRegion;
 import com.salesmanager.core.modules.integration.shipping.model.ShippingQuoteModule;
-import org.apache.commons.lang3.StringUtils;
-
-import javax.inject.Inject;
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
 
 
 public class CustomWeightBasedShippingQuote implements ShippingQuoteModule {

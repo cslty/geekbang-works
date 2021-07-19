@@ -1,9 +1,9 @@
 package com.salesmanager.shop.tags;
 
-import com.salesmanager.core.model.merchant.MerchantStore;
-import com.salesmanager.shop.constants.Constants;
-import com.salesmanager.shop.utils.FilePathUtils;
-import com.salesmanager.shop.utils.ImageFilePath;
+import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.jsp.JspException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -11,9 +11,10 @@ import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.servlet.tags.RequestContextAwareTag;
 
-import javax.inject.Inject;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.jsp.JspException;
+import com.salesmanager.core.model.merchant.MerchantStore;
+import com.salesmanager.shop.constants.Constants;
+import com.salesmanager.shop.utils.FilePathUtils;
+import com.salesmanager.shop.utils.ImageFilePath;
 
 
 public class ContentImageUrlTag extends RequestContextAwareTag {

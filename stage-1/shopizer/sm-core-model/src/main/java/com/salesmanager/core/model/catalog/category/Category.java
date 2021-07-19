@@ -1,17 +1,32 @@
 package com.salesmanager.core.model.catalog.category;
 
-import com.salesmanager.core.model.common.audit.AuditSection;
-import com.salesmanager.core.model.common.audit.Auditable;
-import com.salesmanager.core.model.generic.SalesManagerEntity;
-import com.salesmanager.core.model.merchant.MerchantStore;
-
-import javax.persistence.*;
-import javax.validation.Valid;
-import javax.validation.constraints.NotEmpty;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.TableGenerator;
+import javax.persistence.UniqueConstraint;
+import javax.validation.Valid;
+import javax.validation.constraints.NotEmpty;
+
+import com.salesmanager.core.model.common.audit.AuditSection;
+import com.salesmanager.core.model.common.audit.Auditable;
+import com.salesmanager.core.model.generic.SalesManagerEntity;
+import com.salesmanager.core.model.merchant.MerchantStore;
 
 @Entity
 @EntityListeners(value = com.salesmanager.core.model.common.audit.AuditListener.class)
